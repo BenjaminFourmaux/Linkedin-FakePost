@@ -1,0 +1,202 @@
+/** ----------
+	Style CSS 
+------------- **/
+
+:root {
+	--linkedin-color-white: #f3f2ef;
+	--linkedin-color-blue: #0a66c2;
+	--linkedin-color-dark: #1d2226;
+	--linkedin-font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+	--linkedin-color-text-black: rgba(0,0,0,0.9);
+	--linkedin-color-text-white: hsla(0,0%,100%,0.9);
+}
+
+body {
+	height: 100vh;
+}
+
+
+/** Generic **/
+.p-16 {
+	padding: 16px;
+}
+.p-32 {
+	padding: 32px;
+}
+.p-48 {
+	padding: 45px;
+}
+.p-64 {
+	padding: 64px;
+}
+.t-bold {
+	font-weight: 600;
+}
+
+
+
+/** Theme **/
+.theme-marcado {
+	background-color: var(--linkedin-color-white);
+}
+.theme-dark {
+	background-color: black;
+	color: white;
+}
+
+.side {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100vh;
+}
+.side#configurator {
+	border-right: 4px solid lightgrey;
+	border-top-right-radius: 16px;
+	border-bottom-right-radius: 16px;
+	padding: 2%;
+}
+.side#result {
+	padding: calc(25% - 16px); /* default frame size */
+}
+
+
+/* Post frame color */
+.frame-bg-grey {
+	background-color: grey;
+}
+.frame-bg-azure {
+	background-color: #00A4EF;
+}
+.frame-bg-breeze {
+	background: linear-gradient(140deg, rgb(207, 47, 152), rgb(106, 61, 236));
+}
+.frame-bg-sunset {
+	background: linear-gradient(140deg, rgb(255, 207, 115), rgb(255, 122, 47));
+}
+.frame-bg-raindrop {
+	background: linear-gradient(140deg, rgb(142, 199, 251), rgb(28, 85, 170));
+}
+.frame-bg-meadow {
+	background: linear-gradient(140deg, rgb(89, 212, 153), rgb(160, 135, 45));
+}
+
+.configurator-body section {
+	margin: 5% 0;
+}
+
+.color-visualizer {
+	width: 30px;
+	height: 30px;
+	background-color: blue;
+}
+#configurator section.content textarea {
+	resize: none;
+}
+
+
+/** Post **/
+
+.side#result article#post {
+	border-radius: 0.8rem;
+	border: 1px solid grey;
+}
+/* theme */
+body.theme-marcado .side#result article#post {
+	color: var(--linkedin-color-text-black);
+	background-color: white;
+}
+body.theme-dark .side#result article#post {
+	color: var(--linkedin-color-text-white);
+	background-color: var(--linkedin-color-dark);
+	border: none;
+}
+
+
+.post-header {
+	padding: 1.2rem 1.6rem 0;
+	margin-bottom: 0.8rem;
+}
+.post-header-container {
+	display: flex;
+}
+.post-profile-image {
+	flex-shrink: 0;
+}
+.post-profile-image img {
+	width: 48px;
+    height: 48px;
+}
+.post-profile-info {
+	margin-left: 0.8rem;
+}
+.post-profile-name {
+	display: flex;
+}
+.post-profile-name #result-profile-name {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    display: inline-block;
+	font-family: var(--linkedin-font-family);
+	font-size: 17px;
+	line-height: 1;
+}
+.post-profile-job {
+	display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	color: rgba(0,0,0,0.6);
+	line-height: 1.4;
+}
+
+.post-profile-job #result-profile-job {
+	font-size: 15px;
+}
+.post-profile-info .post-date {
+	line-height: 1.4;
+	font-size: 15px;
+	color: rgba(0,0,0,0.6);
+}
+
+.post-body {
+	margin: 0;
+}
+.post-body .post-body-container {
+	display: block;
+	position: relative;
+	margin: 0 1.6rem;
+	overflow: hidden;
+	line-height: normal;
+}
+
+.post-social-activity {
+	margin: 0 1.6rem;
+	margin-top: 0.8rem;
+	border-bottom: 1px solid lightgrey;
+}
+
+.post-footer {
+	padding: 0.4rem 0;
+}
+.post-footer .row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.post-footer .row button i,
+.post-footer .row button span {
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: #00000099;
+}
+
+/* Theme */
+body.theme-dark .post-profile-job,
+body.theme-dark .post-profile-info .post-date,
+body.theme-dark .post-footer .row button i,
+body.theme-dark .post-footer .row button span {
+	color: hsla(0,0%,100%,0.6);
+}
+
+
